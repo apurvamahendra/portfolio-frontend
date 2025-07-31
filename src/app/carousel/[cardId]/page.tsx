@@ -14,9 +14,9 @@ const POST_BY_ID_QUERY = `*[
   media
 }`;
 
-interface PageProps {
+type PageProps = {
   params: { cardId: string };
-}
+};
 
 const Page = async ({ params }: PageProps) => {
   const { cardId } = params;
