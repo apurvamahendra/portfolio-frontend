@@ -15,8 +15,6 @@ export async function POST(request: NextRequest) {
 
     const validatedData = contactSchema.parse(body);
 
-    console.log("Contact form submission:", validatedData);
-
     const emailResponse = await sendEmail(validatedData);
 
     if (emailResponse.success) {
