@@ -20,6 +20,7 @@
     "next": "15.4.4",
     "next-sanity": "^9.12.3",
     "react": "19.1.0",
+    "react-calendly": "^4.4.0",
     "react-dom": "19.1.0",
     "react-hook-form": "^7.61.1",
     "resend": "^4.7.0",
