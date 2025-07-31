@@ -8,6 +8,7 @@ const POST_BY_ID_QUERY = `*[
 ][0] {
   _id,
   title,
+  subtitle,
   link,
   thumbnail,
   media
@@ -18,7 +19,7 @@ interface PageProps {
 }
 
 const page = async ({ params }: PageProps) => {
-  const { cardId } = await params;
+  const { cardId } = params;
 
   // Fetch the specific post using the cardId
   const post = await client.fetch<CardType>(POST_BY_ID_QUERY, { id: cardId });
