@@ -14,8 +14,8 @@ const POST_BY_ID_QUERY = `*[
   media
 }`;
 
-const Page = async ({ params }: { params: { cardId: string } }) => {
-  const { cardId } = params;
+const Page = async ({ params }: { params: Promise<{ cardId: string }> }) => {
+  const { cardId } = await params;
 
   // Fetch the specific post using the cardId
   const post = await client.fetch<CardType>(POST_BY_ID_QUERY, { id: cardId });
