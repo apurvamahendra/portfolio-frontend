@@ -14,11 +14,7 @@ const POST_BY_ID_QUERY = `*[
   media
 }`;
 
-type PageProps = {
-  params: { cardId: string };
-};
-
-const Page = async ({ params }: PageProps) => {
+const Page = async (params: { cardId: string }) => {
   const { cardId } = params;
 
   // Fetch the specific post using the cardId
