@@ -18,7 +18,7 @@ interface PageProps {
   params: { cardId: string };
 }
 
-const page = async ({ params }: PageProps) => {
+const Page = async ({ params }: PageProps) => {
   const { cardId } = params;
 
   // Fetch the specific post using the cardId
@@ -51,4 +51,4 @@ const page = async ({ params }: PageProps) => {
   );
 };
 
-export default page;
+export default Page;
