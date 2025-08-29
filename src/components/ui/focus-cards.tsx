@@ -38,7 +38,7 @@ export const Card = React.memo(
       target={card.link ? "_blank" : undefined}
       rel="noopener noreferrer"
     >
-      <span className=" flex flex-col items-center gap-2 my-2 lg:hidden ">
+      <span className=" flex flex-col items-start gap-2 my-2 lg:hidden ">
         <p className="text-xl">{card.title}</p>
         <p className="text-sm">{card.subtitle}</p>
       </span>
@@ -47,7 +47,7 @@ export const Card = React.memo(
         onMouseLeave={() => setHovered(null)}
         className={cn(
           "rounded-lg relative bg-gray-100 dark:bg-neutral-900 overflow-hidden h-70 w-full transition-all duration-300 ease-out text-black ",
-          hovered !== null && hovered !== index && "blur-sm scale-[0.98]"
+          hovered !== null && hovered !== index && "scale-[0.98]"
         )}
       >
         <img
